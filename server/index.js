@@ -41,6 +41,7 @@ connection.connect(function (err) {
 // Create a new testimonial // Done
 app.post('/api/create', cors(corsOptionsDelegate), (req, res) => {
     console.log(req.body)
+    
     let sql = `INSERT INTO testimonials 
     (name, testimonial, service, link, linktype, linkname)
     VALUES('${req.body.name}', '${req.body.testimonial}', '${req.body.service}', '${req.body.link}', '${req.body.linktype}', '${req.body.linkname}')`;
